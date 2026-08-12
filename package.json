@@ -1,0 +1,26 @@
+{
+  "name": "lokalise-cf-orchestrator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silbersteine/lokalise-cf-orchestrator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/silbersteine/lokalise-cf-orchestrator/issues"
+  },
+  "homepage": "https://github.com/silbersteine/lokalise-cf-orchestrator#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260801.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.118.0"
+  }
+}

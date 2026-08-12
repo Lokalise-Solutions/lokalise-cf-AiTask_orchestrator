@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Wrangler / Cloudflare local state
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Environment / secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Build / output
+dist/
+build/
+.out/
+coverage/
+
+# Logs & caches
+*.log
+npm-debug.log*
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Optional local test payloads
+*.local.json

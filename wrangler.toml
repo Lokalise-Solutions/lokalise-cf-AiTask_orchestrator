@@ -1,0 +1,36 @@
+name = "lokalise-cf-orchestrator"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lokalise_orchestrator"
+database_id = "bf9e4470-c3c6-450e-b90d-7f694deee6b7"
+migrations_dir = "migrations"
+
+[[kv_namespaces]]
+binding = "CONFIG"
+id = "0d0e8c7fcece4491a28248bab0462d06"
+
+[[queues.producers]]
+binding = "INBOUND_QUEUE"
+queue = "lokalise-inbound-events"
+
+[[queues.consumers]]
+queue = "lokalise-inbound-events"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 5
+
+[[durable_objects.bindings]]
+name = "UPLOAD_AGGREGATOR"
+class_name = "UploadAggregator"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["UploadAggregator"]
+
+[[workflows]]
+name = "translate-ai"
+binding = "TRANSLATE_WORKFLOW"
+class_name = "TranslateAiWorkflow"

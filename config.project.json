@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "source_lang": "en",
+    "target_langs": ["es"],
+    "aggregation_window_ms": 10000,
+    "task_poll_max_minutes": 30
+}
